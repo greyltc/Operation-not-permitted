@@ -3,5 +3,6 @@
 apt update
 apt upgrade -y
 apt install -y mkosi
-cd /tmp
+mkdir dir
+cd dir
 mkosi build
