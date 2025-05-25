@@ -16,7 +16,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -y install podman
-          podman build --security-opt seccomp=unconfined .
+          podman build --security-opt seccomp=unconfined --security-opt apparmor=unconfined --label=disable .
         
 #      - name: docker build
 #        id: build
