@@ -12,6 +12,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: docker build
-        id: build
-        uses: docker/build-push-action@v6
+      - name: fix try
+        run: |
+          apt-get update
+          apt-get -y install podman
+          podman build
+        
+#      - name: docker build
+#        id: build
+#        uses: docker/build-push-action@v6
