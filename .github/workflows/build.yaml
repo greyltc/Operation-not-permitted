@@ -16,6 +16,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -y install podman
+          sysctl kernel.unprivileged_userns_clone
           podman build --security-opt seccomp=unconfined --security-opt apparmor=unconfined --label=disable .
         
 #      - name: docker build
