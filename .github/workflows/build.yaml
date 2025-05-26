@@ -16,4 +16,4 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -y install podman
-          podman build --cap-add=CAP_SYS_ADMIN --security-opt seccomp=unconfined --security-opt apparmor=unconfined --security-opt label=disable .
+          podman build --cap-add=CAP_SYS_ADMIN .
