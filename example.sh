@@ -2,7 +2,8 @@
 
 apt update
 apt upgrade -y
-apt install -y mkosi
+apt install -y mkosi systemd-ukify
 mkdir dir
 cd dir
 mkosi build
+
