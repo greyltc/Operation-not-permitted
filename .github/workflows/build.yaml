@@ -16,9 +16,4 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -y install podman
-          sysctl kernel.unprivileged_userns_clone
           podman build --cap-add=CAP_SYS_ADMIN --security-opt seccomp=unconfined --security-opt apparmor=unconfined --security-opt label=disable .
-        
-#      - name: docker build
-#        id: build
-#        uses: docker/build-push-action@v6
